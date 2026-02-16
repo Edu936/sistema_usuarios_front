@@ -1,16 +1,26 @@
-import { NavLink } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import './home.css'
 
 function Home () {
     return (
-        <div>
-            <h1>Olá Eduardo!!!!!</h1>
-            <nav>
-                <NavLink to='/register' end>
-                Registrar-se
-                </NavLink>
-            </nav>
-        </div>
+        <main>
+            <header>
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to='/register'>Criar Usuário</Link>
+                        </li>
+                        <li>Editar Usuário</li>
+                    </ul>
+                </nav>
+                <div className="search">
+                    <input type="search" name="search_user" id="search_user" />
+                </div>
+            </header>
+            <div className="content">
+                <Outlet />
+            </div>
+        </main>
     );
 }
 

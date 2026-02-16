@@ -1,4 +1,4 @@
-import './main.css'
+import './styles/global.css'
 import router from './routes/routes'
 import { createRoot } from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom'
